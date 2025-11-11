@@ -1,0 +1,14 @@
+// Listing 1: An ideal situation
+enum Sounds {
+  explosionSnd = 101,
+  attackSnd = 102,
+  //... each constant increases by 1
+  victorySnd = 185
+}
+
+Sounds firstSnd = explosionSnd;
+Sounds lastSnd = victorySnd;
+
+for ( int theSound = firstSnd;
+theSound <= lastSnd; ++theSound )
+  CheckSoundIsPresent(theSound); 
