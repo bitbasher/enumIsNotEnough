@@ -30,7 +30,7 @@ I've made use of templates for implementing this design, since you'll typically 
 
 [Listing 3](https://github.com/bitbasher/enumIsNotEnough/blob/6db79f40b5ec0a93a6705651e7b3b93cdd28b82d/Listing_3_A_Class_Template.cpp) presents a class template that implements the desired features. The class has a private: constructor from int. Only the class-static instances may be defined this way. The copy constructor (synthesized by the compiler) makes it possible to instantiate local variables that are copies of class-static instances. The class keeps a set of its static instances, which is always sorted. STL thus does all the hard work for you, and your implementation can remain simple and intuitive, or nearly so.
 
-What may not be so intuitive are the two structs in the private section, Enum_Predicate_Corresponds and Enum_Ptr_Less. The first is a predicate for use with find_if in the Corresponding_Enum method. It's not strictly necessary, since I could have used an explicit loop comparing the members of the set with the sought value, but find_if is better style. The second struct, Enum_Ptr_Less, is absolutely necessary to keep your set sorted in the order you want. As Scott Meyer points out in [(2)](#Reference 2), you have to be careful when dealing with associative containers of pointers. The containers will by default be sorted by comparing the pointer values, which is almost never what you want. So you have to give the set a comparison object whose operator(), when given two members of the set, will return whether the first one is less than the other according to the appropriate criterion. In our example, you need to compare the results of the Get_Value function.
+What may not be so intuitive are the two structs in the private section, Enum_Predicate_Corresponds and Enum_Ptr_Less. The first is a predicate for use with find_if in the Corresponding_Enum method. It's not strictly necessary, since I could have used an explicit loop comparing the members of the set with the sought value, but find_if is better style. The second struct, Enum_Ptr_Less, is absolutely necessary to keep your set sorted in the order you want. As Scott Meyer points out in [Reference 2], you have to be careful when dealing with associative containers of pointers. The containers will by default be sorted by comparing the pointer values, which is almost never what you want. So you have to give the set a comparison object whose operator(), when given two members of the set, will return whether the first one is less than the other according to the appropriate criterion. In our example, you need to compare the results of the Get_Value function.
 
 [Listing 4](https://github.com/bitbasher/enumIsNotEnough/blob/6db79f40b5ec0a93a6705651e7b3b93cdd28b82d/Listing_4_simple_test_driver.cpp) gives an example of how the "enumeration class" may be used in a simple test driver. This code was compiled and run on Metrowerks CodeWarrior 7.
 
@@ -52,8 +52,8 @@ If the underlying type does not have an operator< (or if this operator doesn't
 Enumeration classes enable the encapsulation of collections of related constants. They allow programmatic access to the minimum and maximum values of the collection as well as straightforward iteration and membership tests. In their simpler form, they can be viewed as an improved form of enum. By templating them on their underlying enumerated type, they can be applied to collections of constants of any ordered type.
 
 ## Bibliography
-[1.](#Reference 1) Bjarne Stroustrup. _The C++ Programming Language_, 3d Edition, (Addison-Wesley, 2000), p. 265.
-[2.](#Reference 2) Scott Meyers. _Effective STL_ (Addison-Wesley, 2001), Item 20, p. 88.
+[#Reference 1] Bjarne Stroustrup. _The C++ Programming Language_, 3d Edition, (Addison-Wesley, 2000), p. 265.
+[#Reference 2] Scott Meyers. _Effective STL_ (Addison-Wesley, 2001), Item 20, p. 88.
 
 ## Download the Code
 <meynard.zip> (2025 – ftp site is by login only)
