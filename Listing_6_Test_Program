@@ -1,0 +1,98 @@
+// Listing 6: A sample testing program and its output
+Test_Enum_String.h
+
+#include <string>
+#include "Tmpl_Enum.h"
+
+class Test_Enum_String:
+  public Tmpl_Enum<std::string, Test_Enum_String> {
+
+private:
+
+  explicit Test_Enum_String(const std::string& Value):
+    Tmpl_Enum<std::string, Test_Enum_String>(Value) { }
+
+public:
+
+  static const Test_Enum_String enum_Alpha;
+  static const Test_Enum_String enum_Beta;
+  static const Test_Enum_String enum_Delta;
+  static const Test_Enum_String enum_Epsilon;
+  static const Test_Enum_String enum_Omega;
+};
+
+Test_Enum_String.cpp
+
+#include "Test_Enum_String.h"
+Tmpl_Enum<std::string, Test_Enum_String>::instances_list 
+Tmpl_Enum<std::string, Test_Enum_String>::s_instances;
+
+const Test_Enum_String Test_Enum_String::enum_Alpha("Alpha");
+const Test_Enum_String Test_Enum_String::enum_Beta("Beta");
+const Test_Enum_String Test_Enum_String::enum_Delta("Delta");
+const Test_Enum_String Test_Enum_String::enum_Epsilon("Epsilon");
+const Test_Enum_String Test_Enum_String::enum_Omega("Omega");
+
+Main.cpp
+
+#include "Test_Enum_String.h"
+void Validate_Str_Elem(const std::string& theString)
+{
+  using std::cout;
+  using std::endl;
+  cout << theString;
+  if ( Test_Enum_String::Is_Valid_Value(theString) )
+    cout << " is ";
+  else
+    cout << " isn't ";
+  cout << "a valid value for Test_Enum_String." << endl;
+}
+
+int main()
+{
+  using std::cout;
+  using std::endl;
+  int Cur_Elem = 0;
+  for ( Test_Enum_String::const_iterator
+        i = Test_Enum_String::begin();
+        i != Test_Enum_String::end(); ++i )
+  {
+    Cur_Elem++;
+    cout << "Test_Enum_String element #" << Cur_Elem << " value = " << (*i)->Get_Value() << endl;
+  }
+
+  cout << "Total #elements = " << Test_Enum_String::size() << endl;
+
+  cout << "Min enum value = " << Test_Enum_String::Min() << endl;
+  cout << "Max enum value = " << Test_Enum_String::Max() << endl;
+
+  Validate_Str_Elem("Alpha");
+  Validate_Str_Elem("Gamma");
+  Validate_Str_Elem("Beta");
+  Validate_Str_Elem("BetA");
+
+  Test_Enum_String E(Test_Enum_String::enum_Alpha);
+  cout << "Value of E = " << E.Get_Value() << endl;
+
+  E = Test_Enum_String::enum_Omega;
+  cout << "Value of E = " << E.Get_Value() << endl;
+  }
+  return 0;
+}
+
+Output:
+
+Test_Enum_String element #1 value = Alpha
+Test_Enum_String element #2 value = Beta
+Test_Enum_String element #3 value = Delta
+Test_Enum_String element #4 value = Epsilon
+Test_Enum_String element #5 value = Omega
+Total #elements = 5
+Min enum value = Alpha
+Max enum value = Omega
+Alpha is a valid value for Test_Enum_String.
+Gamma isn't a valid value for Test_Enum_String.
+Beta is a valid value for Test_Enum_String.
+BetA isn't a valid value for Test_Enum_String.
+Value of E = Alpha
+Value of E = Omega
