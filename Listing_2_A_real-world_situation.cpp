@@ -1,4 +1,4 @@
-Listing 2: A real-world situation
+// Listing 2: A real-world situation
 enum Sounds {
   // Human sounds in [100, 200[
   explosionSnd = 101,
