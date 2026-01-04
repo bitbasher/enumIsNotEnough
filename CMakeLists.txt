@@ -20,6 +20,19 @@ if(BUILD_EXAMPLES)
     add_subdirectory(examples)
 endif()
 
+# Optional: Build documentation with Doxygen
+option(BUILD_DOCS "Build documentation with Doxygen" OFF)
+
+if(BUILD_DOCS)
+    find_package(Doxygen REQUIRED)
+    add_custom_target(docs
+        COMMAND ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        COMMENT "Generating API documentation with Doxygen..."
+        VERBATIM
+    )
+endif()
+
 # Installation rules
 install(TARGETS enumIsEnough
     EXPORT enumIsEnoughConfig
@@ -46,3 +59,4 @@ install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/enumIsEnoughConfigVersion.cmake"
     DESTINATION lib/cmake/enumIsEnough
 )
+

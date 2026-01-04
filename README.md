@@ -26,6 +26,25 @@ _See [README_original.md](README_original.md) for the original article._
 - Automatically maintains a sorted set of all enum instances
 - Supports any value type that implements `operator<` and `operator==`
 
+## Project Structure
+
+```
+enumIsNotEnough/
+├── enumIsEnough.hpp          # Main header-only template library
+├── CMakeLists.txt            # Top-level CMake configuration
+├── README.md                 # User guide with examples
+├── README_original.md        # Original article preserved
+├── LICENSE
+└── examples/
+    ├── CMakeLists.txt        # Examples build configuration
+    ├── enum_int.hpp          # Integer enum example
+    ├── enum_int.cpp
+    ├── enum_int_main.cpp
+    ├── enum_string.hpp       # String enum example
+    ├── enum_string.cpp
+    └── enum_string_main.cpp
+```
+
 ## Quick Start
 
 ### 1. Define Your Enum Class
@@ -157,6 +176,19 @@ cmake --build .
 ./examples/enum_int_example
 ./examples/enum_string_example
 ```
+
+## Building Documentation
+
+Generate API documentation using Doxygen:
+
+```bash
+mkdir build && cd build
+cmake .. -DBUILD_DOCS=ON
+cmake --build . --target docs
+# Open docs/html/index.html in your browser
+```
+
+Requires Doxygen to be installed. See [doxygen.org](https://www.doxygen.nl/) for installation instructions.
 
 ## Requirements
 

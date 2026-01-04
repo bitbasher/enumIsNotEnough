@@ -1,10 +1,10 @@
 #include "enum_string.hpp"
 
 // Define static member
-enumIsEnough<Test_Enum_String, std::string>::instances_list enumIsEnough<Test_Enum_String, std::string>::s_instances;
+enumIsEnough<enum_string, std::string>::instances_list enumIsEnough<enum_string, std::string>::s_instances;
 
-const Test_Enum_String Test_Enum_String::enum_Alpha("Alpha");
-const Test_Enum_String Test_Enum_String::enum_Beta("Beta");
-const Test_Enum_String Test_Enum_String::enum_Delta("Delta");
-const Test_Enum_String Test_Enum_String::enum_Epsilon("Epsilon");
-const Test_Enum_String Test_Enum_String::enum_Omega("Omega");
+const enum_string enum_string::enum_Alpha("Alpha");
+const enum_string enum_string::enum_Beta("Beta");
+const enum_string enum_string::enum_Delta("Delta");
+const enum_string enum_string::enum_Epsilon("Epsilon");
+const enum_string enum_string::enum_Omega("Omega");

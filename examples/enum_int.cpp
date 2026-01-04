@@ -1,12 +1,12 @@
 #include "enum_int.hpp"
 
 // Define static member
-enumIsEnough<Test_Enum, int>::instances_list enumIsEnough<Test_Enum, int>::s_instances;
+enumIsEnough<enum_int, int>::instances_list enumIsEnough<enum_int, int>::s_instances;
 
-const Test_Enum Test_Enum::enum_11(11);
-const Test_Enum Test_Enum::enum_12(12);
-const Test_Enum Test_Enum::enum_18(18);
-const Test_Enum Test_Enum::enum_20(20);
-const Test_Enum Test_Enum::enum_21(21);
+const enum_int enum_int::enum_11(11);
+const enum_int enum_int::enum_12(12);
+const enum_int enum_int::enum_18(18);
+const enum_int enum_int::enum_20(20);
+const enum_int enum_int::enum_21(21);
 
 

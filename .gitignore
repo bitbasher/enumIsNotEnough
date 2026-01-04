@@ -17,6 +17,11 @@
 # Debugger Files
 *.pdb
 
+# Doxygen output
+docs/html/
+docs/latex/
+docs/man/
+
 # Compiled Dynamic libraries
 *.so
 *.dylib

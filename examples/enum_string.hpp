@@ -1,19 +1,26 @@
+#pragma once
+
 #include <string>
 #include "../enumIsEnough.hpp"
 
-class Test_Enum_String:
-  public enumIsEnough<Test_Enum_String, std::string> {
+/// @class enum_string
+/// @brief Example string-based enumeration using the enumIsEnough template.
+/// 
+/// Demonstrates how to create a type-safe enum with string values.
+/// 
+/// @note Iteration uses static begin()/end() methods since instances are class-wide.
+/// Example: <code>for (auto it = enum_string::begin(); it != enum_string::end(); ++it)</code>
+class enum_string :
+  public enumIsEnough<enum_string, std::string> {
 
 private:
-
-  explicit Test_Enum_String(const std::string& Value):
-    enumIsEnough<Test_Enum_String, std::string>(Value) { }
+  explicit enum_string(const std::string& Value) :
+    enumIsEnough<enum_string, std::string>(Value) { }
 
 public:
-
-  static const Test_Enum_String enum_Alpha;
-  static const Test_Enum_String enum_Beta;
-  static const Test_Enum_String enum_Delta;
-  static const Test_Enum_String enum_Epsilon;
-  static const Test_Enum_String enum_Omega;
+  static const enum_string enum_Alpha;
+  static const enum_string enum_Beta;
+  static const enum_string enum_Delta;
+  static const enum_string enum_Epsilon;
+  static const enum_string enum_Omega;
 };

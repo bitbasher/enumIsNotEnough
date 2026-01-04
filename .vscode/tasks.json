@@ -4,7 +4,10 @@
 		{
 			"label": "build enum_int example",
 			"type": "shell",
-			"command": "cd ${workspaceFolder}/examples && cl.exe /EHsc /std:c++latest /I.. /Fe:enum_int_example.exe enum_int.cpp enum_int_main.cpp",
+			"command": "cl.exe /EHsc /std:c++latest /I.. /Fe:enum_int_example.exe enum_int.cpp enum_int_main.cpp",
+			"options": {
+				"cwd": "${workspaceFolder}/examples"
+			},
 			"problemMatcher": [
 				"$msCompile"
 			],
@@ -16,7 +19,10 @@
 		{
 			"label": "build enum_string example",
 			"type": "shell",
-			"command": "cd ${workspaceFolder}/examples && cl.exe /EHsc /std:c++latest /I.. /Fe:enum_string_example.exe enum_string.cpp enum_string_main.cpp",
+			"command": "cl.exe /EHsc /std:c++latest /I.. /Fe:enum_string_example.exe enum_string.cpp enum_string_main.cpp",
+			"options": {
+				"cwd": "${workspaceFolder}/examples"
+			},
 			"problemMatcher": [
 				"$msCompile"
 			],

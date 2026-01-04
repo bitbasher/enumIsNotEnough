@@ -1,0 +1,110 @@
+PROJECT_NAME           = "enumIsEnough"
+PROJECT_NUMBER         = 1.0.0
+PROJECT_BRIEF          = "Type-safe C++ enumeration template class"
+PROJECT_LOGO           = 
+
+OUTPUT_DIRECTORY       = ./docs
+
+INPUT                  = enumIsEnough.hpp examples/ README.md
+INPUT_ENCODING         = UTF-8
+
+FILE_PATTERNS          = *.hpp *.cpp *.md
+RECURSIVE              = YES
+
+EXCLUDE_PATTERNS       = */CMakeFiles/* */.git/*
+
+USE_MDFILE_AS_MAINPAGE = README.md
+
+OPTIMIZE_OUTPUT_FOR_C  = NO
+OPTIMIZE_FOR_FORTRAN   = NO
+OPTIMIZE_FOR_VHDL      = NO
+OPTIMIZE_FOR_SLICE     = NO
+
+EXTENSION_MAPPING      = hpp=C++ cpp=C++
+
+STRIP_FROM_PATH        = 
+STRIP_FROM_INC_PATH    = 
+
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_FILE_EXTENSION    = .html
+
+GENERATE_LATEX         = NO
+GENERATE_MAN           = NO
+GENERATE_RTF           = NO
+GENERATE_XML           = NO
+
+GENERATE_DOCSET        = NO
+GENERATE_TREEVIEW      = YES
+
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ESCAPED    = NO
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+
+FULL_PATH_NAMES        = YES
+STRIP_FROM_PATH        = 
+
+SEARCHENGINE           = YES
+SERVER_BASED_SEARCH    = NO
+
+EXTERNAL_SEARCH        = NO
+
+CLANG_ASSISTED_PARSING = NO
+CLANG_ADD_INC_PATHS    = YES
+CLANG_USE_HEADERS      = NO
+
+SORT_MEMBER_DOCS       = YES
+SORT_BRIEF_DOCS        = NO
+SORT_MEMBERS_CTORS_1ST = NO
+SORT_GROUP_NAMES       = NO
+SORT_BY_SCOPE_NAME     = NO
+
+GENERATE_TODOLIST      = YES
+GENERATE_TESTLIST      = YES
+GENERATE_BUGLIST       = YES
+GENERATE_DEPRECATEDLIST= YES
+
+ENABLED_SECTIONS       = 
+
+MAX_INITIALIZERS       = 30
+
+SHOW_FILES             = YES
+SHOW_NAMESPACES        = YES
+SHOW_INCLUDE_FILES     = YES
+SHOW_GROUPED_MEMBERS_INC = NO
+
+FORCE_LOCAL_RANGE      = NO
+
+LAYOUT_FILE            = 
+
+CITE_BIB_FILES         = 
+
+LATEX_CMD_NAME         = latex
+MAKEINDEX_CMD_NAME     = makeindex
+
+PAPER_TYPE             = a4
+EXTRA_PACKAGES         = 
+LATEX_HEADER           = 
+LATEX_FOOTER           = 
+LATEX_EXTRA_STYLESHEET = 
+LATEX_EXTRA_FILES      = 
+
+PDF_HYPERLINKS         = YES
+USE_PDFLATEX           = YES
+LATEX_BATCHMODE        = NO
+LATEX_HIDE_INDICES     = NO
+LATEX_OUTPUT           = latex
+LATEX_BIB_STYLE        = plain
+
+LATEX_MAKEINDEX_CMD    = makeindex
+
+MAKEINDEX_CMD_NAME     = makeindex
+
+DOXYGEN_QUIET          = NO
