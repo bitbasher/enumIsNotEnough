@@ -33,5 +33,7 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "terminal.integrated.shellIntegration.enabled": true,
   "powershell.integratedConsole.suppressStartupBanner": true,
-  "powershell.integratedConsole.startInBackground": false
+  "powershell.integratedConsole.startInBackground": false,
+  "C_Cpp.errorSquiggles": "enabled",
+  "C_Cpp.dimInactiveRegions": true
 }

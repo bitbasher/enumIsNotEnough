@@ -10,8 +10,8 @@ target_include_directories(enumIsEnough INTERFACE
     $<INSTALL_INTERFACE:include>
 )
 
-# Require C++17 or later
-target_compile_features(enumIsEnough INTERFACE cxx_std_17)
+# Require C++23 or later
+target_compile_features(enumIsEnough INTERFACE cxx_std_23)
 
 # Optional: Build examples
 option(BUILD_EXAMPLES "Build example programs" ON)
