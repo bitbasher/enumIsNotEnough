@@ -2,31 +2,35 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "build test_enoughEnum",
+			"label": "build enum_int example",
 			"type": "shell",
-			"command": "cd ${workspaceFolder} && cl.exe /EHsc /std:c++latest /Fe:test_enoughEnum.exe test_enoughEnum.cpp main.cpp",
+			"command": "Push-Location '${workspaceFolder}\\examples'; cl.exe /EHsc /std:c++latest /I.. /Fe:enum_int_example.exe enum_int.cpp enum_int_main.cpp; Pop-Location",
 			"problemMatcher": [
 				"$msCompile"
 			],
 			"group": "build"
 		},
 		{
-			"label": "build Test_Enum",
+			"label": "build enum_string example",
 			"type": "shell",
-			"command": "cd ${workspaceFolder} && cl.exe /EHsc /std:c++latest /Fe:test_enum.exe Test_Enum.cpp test_enoughEnum.cpp main.cpp",
+			"command": "Push-Location '${workspaceFolder}\\examples'; cl.exe /EHsc /std:c++latest /I.. /Fe:enum_string_example.exe enum_string.cpp enum_string_main.cpp; Pop-Location",
 			"problemMatcher": [
 				"$msCompile"
 			],
 			"group": "build"
 		},
 		{
-			"label": "build Test_Enum_String",
+			"label": "generate documentation",
 			"type": "shell",
-			"command": "cd ${workspaceFolder} && cl.exe /EHsc /std:c++latest /Fe:test_enum_string.exe Test_Enum_String.cpp Test_Enum_String_Main.cpp",
-			"problemMatcher": [
-				"$msCompile"
-			],
-			"group": "build"
+			"command": "Push-Location '${workspaceFolder}'; doxygen Doxyfile; Pop-Location",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			},
+			"group": "build",
+			"problemMatcher": []
 		}
 	]
 }
