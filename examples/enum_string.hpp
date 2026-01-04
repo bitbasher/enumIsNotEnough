@@ -1,5 +1,5 @@
 #include <string>
-#include "enumIsEnough.hpp"
+#include "../enumIsEnough.hpp"
 
 class Test_Enum_String:
   public enumIsEnough<Test_Enum_String, std::string> {

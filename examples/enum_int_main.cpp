@@ -1,5 +1,5 @@
-#include "enumIsEnough.hpp"
-#include "test_enoughEnum.hpp"
+#include "../enumIsEnough.hpp"
+#include "enum_int.hpp"
 #include <iostream>
 
 int main()

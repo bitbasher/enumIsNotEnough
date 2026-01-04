@@ -1,6 +1,6 @@
 #pragma once
 
-#include "enumIsEnough.hpp"
+#include "../enumIsEnough.hpp"
 
 class Test_Enum: public enumIsEnough<Test_Enum, int> {
 

@@ -1,4 +1,4 @@
-#include "Test_Enum_String.hpp"
+#include "enum_string.hpp"
 
 // Define static member
 enumIsEnough<Test_Enum_String, std::string>::instances_list enumIsEnough<Test_Enum_String, std::string>::s_instances;

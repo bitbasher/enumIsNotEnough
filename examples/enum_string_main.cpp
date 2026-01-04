@@ -1,4 +1,4 @@
-#include "Test_Enum_String.hpp"
+#include "enum_string.hpp"
 
 #include <iostream>
 

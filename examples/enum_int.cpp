@@ -1,4 +1,4 @@
-#include "Test_Enum.hpp"
+#include "enum_int.hpp"
 
 // Define static member
 enumIsEnough<Test_Enum, int>::instances_list enumIsEnough<Test_Enum, int>::s_instances;
