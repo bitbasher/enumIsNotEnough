@@ -1,5 +1,7 @@
 #include "Test_Enum_String.hpp"
 
+#include <iostream>
+
 void Validate_Str_Elem(const std::string& theString)
 {
   using std::cout;
@@ -40,6 +42,6 @@ int main()
 
   E = Test_Enum_String::enum_Omega;
   cout << "Value of E = " << E.Get_Value() << endl;
-  }
+  
   return 0;
 }

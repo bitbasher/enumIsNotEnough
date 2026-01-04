@@ -13,7 +13,7 @@
 		{
 			"label": "build Test_Enum",
 			"type": "shell",
-			"command": "cd ${workspaceFolder} && cl.exe /EHsc /std:c++latest /Fe:test_enum.exe Test_Enum.cpp main.cpp",
+			"command": "cd ${workspaceFolder} && cl.exe /EHsc /std:c++latest /Fe:test_enum.exe Test_Enum.cpp test_enoughEnum.cpp main.cpp",
 			"problemMatcher": [
 				"$msCompile"
 			],
