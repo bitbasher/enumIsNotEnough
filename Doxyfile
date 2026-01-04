@@ -5,7 +5,7 @@ PROJECT_LOGO           =
 
 OUTPUT_DIRECTORY       = ./docs
 
-INPUT                  = enumIsEnough.hpp examples/ README.md
+INPUT                  = enumIsEnough.hpp examples/ pages/ README.md
 INPUT_ENCODING         = UTF-8
 
 FILE_PATTERNS          = *.hpp *.cpp *.md
@@ -31,6 +31,7 @@ REFERENCES_RELATION    = YES
 GENERATE_HTML          = YES
 HTML_OUTPUT            = html
 HTML_FILE_EXTENSION    = .html
+HTML_EXTRA_STYLESHEET  = 
 
 GENERATE_LATEX         = NO
 GENERATE_MAN           = NO
@@ -39,6 +40,7 @@ GENERATE_XML           = NO
 
 GENERATE_DOCSET        = NO
 GENERATE_TREEVIEW      = YES
+TREEVIEW_WIDTH         = 250
 
 QUIET                  = NO
 WARNINGS               = YES
@@ -108,3 +110,21 @@ LATEX_MAKEINDEX_CMD    = makeindex
 MAKEINDEX_CMD_NAME     = makeindex
 
 DOXYGEN_QUIET          = NO
+
+# Additional Doxygen settings for better documentation
+EXAMPLE_PATH           = examples
+EXAMPLE_PATTERNS       = *_main.cpp
+EXAMPLE_RECURSIVE      = YES
+
+CLASS_DIAGRAMS         = YES
+HAVE_DOT               = NO
+
+DOT_CLEANUP            = YES
+
+# Enable collaboration diagrams and dependency graphs if dot is available
+COLLABORATION_GRAPH    = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+
+GRAPHICAL_HIERARCHY    = YES
+DIRECTORY_GRAPH        = YES

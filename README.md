@@ -179,7 +179,7 @@ cmake --build .
 
 ## Building Documentation
 
-Generate API documentation using Doxygen:
+Generate comprehensive API documentation using Doxygen:
 
 ```bash
 mkdir build && cd build
@@ -189,6 +189,13 @@ cmake --build . --target docs
 ```
 
 Requires Doxygen to be installed. See [doxygen.org](https://www.doxygen.nl/) for installation instructions.
+
+### Documentation Includes:
+- **API Reference** - Complete class and function documentation
+- **Implementation Guide** - Step-by-step instructions for creating custom enums
+- **Examples** - Working code examples (integer and string-based enumerations)
+- **Class Diagrams** - Visual representation of template structure
+- **Source Browser** - Annotated source code with cross-references
 
 ## Requirements
 
