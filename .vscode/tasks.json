@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build test_enoughEnum",
+			"type": "shell",
+			"command": "cd ${workspaceFolder} && cl.exe /EHsc /std:c++latest /Fe:test_enoughEnum.exe test_enoughEnum.cpp main.cpp",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "build Test_Enum",
+			"type": "shell",
+			"command": "cd ${workspaceFolder} && cl.exe /EHsc /std:c++latest /Fe:test_enum.exe Test_Enum.cpp main.cpp",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		},
+		{
+			"label": "build Test_Enum_String",
+			"type": "shell",
+			"command": "cd ${workspaceFolder} && cl.exe /EHsc /std:c++latest /Fe:test_enum_string.exe Test_Enum_String.cpp Test_Enum_String_Main.cpp",
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build"
+		}
+	]
+}

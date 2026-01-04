@@ -13,7 +13,7 @@ public:
   static const Test_Enum enum_21;
 };
 
-Test_Enum.cpp
+// Test_Enum.cpp
 
 #include "Test_Enum.h"
 
@@ -25,7 +25,7 @@ const Test_Enum Test_Enum::enum_18(18);
 const Test_Enum Test_Enum::enum_20(20);
 const Test_Enum Test_Enum::enum_21(21);
 
-Main.cpp
+// Main.cpp
 
 #include "Test_Enum.h"
 int main()
@@ -66,7 +66,7 @@ int main()
 
   return 0;
 }
-
+/*
 Output:
 
 Test_Enum element #1 value = 11
@@ -90,3 +90,4 @@ Max enum value = 21
 21 is a valid value for Test_Enum.
 Value of E = 11
 Value of E = 20
+*/

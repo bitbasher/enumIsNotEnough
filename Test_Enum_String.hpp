@@ -1,13 +1,13 @@
 #include <string>
-#include "Template_Enum.h"
+#include "enumIsEnough.hpp"
 
 class Test_Enum_String:
-  public Tmpl_Enum<std::string, Test_Enum_String> {
+  public enumIsEnough<Test_Enum_String, std::string> {
 
 private:
 
   explicit Test_Enum_String(const std::string& Value):
-    Tmpl_Enum<std::string, Test_Enum_String>(Value) { }
+    enumIsEnough<Test_Enum_String, std::string>(Value) { }
 
 public:
 

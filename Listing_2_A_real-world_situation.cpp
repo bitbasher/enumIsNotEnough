@@ -7,8 +7,10 @@ enum Sounds {
   deathSnd = 104,
   // Alien sounds in [200, 300[
   alienAttackSnd = 201,
-  ...
-  alienDeathSnd = 227,
+  alienSlitheringSnd = 202,
+  alienJumpSnd = 203,
+  alienCrySnd = 204,
+  alienDeathSnd = 205,
   // Miscellaneous sounds >= 500
   victorySnd = 500
 };
